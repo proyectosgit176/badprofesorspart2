@@ -1,0 +1,66 @@
+BadProfesors - proyecto completo
+
+CARPETAS
+  sitio/     las 20 páginas (HTML, CSS y JavaScript). Abrí sitio/index.html
+  backend/   programa en Java (POO) con base de datos SQL
+
+CÓMO CORRER EL BACKEND (necesitás Java 17 o más nuevo)
+  Windows:     doble clic en backend/ejecutar.bat
+  Mac / Linux: en la carpeta backend, escribí  sh ejecutar.sh
+  La primera vez se crea solo el archivo badprofesors.db con las tablas y datos de ejemplo.
+
+CUENTAS (dos versiones, todavía separadas)
+  Sitio:   crear-cuenta.html guarda nombre, email y curso en el navegador (localStorage).
+           ingresar.html comprueba que el email exista. mi-cuenta.html muestra los datos guardados.
+  Backend: opción 5 del menú ("Crear cuenta") guarda un alumno en la tabla alumnos con un INSERT.
+  La contraseña no se guarda en ninguna de las dos: guardarla sin cifrar no es seguro,
+  y cifrarla bien necesita un servidor.
+
+==========================================================
+DÓNDE ESTÁ CADA COSA
+==========================================================
+
+POO (todo en backend/, archivos .java)
+  Clases y objetos ...... Persona, Alumno, Docente, Encuesta
+  Encapsulamiento ....... atributos "private" + getters (Persona.java líneas 6-7, Encuesta.java líneas 4-9)
+  Abstracción ........... Persona.java línea 3 (clase abstract) y línea 18 (método abstracto descripcion)
+  Herencia .............. Alumno.java línea 2 y Docente.java ("extends Persona"); línea 8 de Alumno: super(...)
+  Polimorfismo .......... @Override descripcion() en Alumno.java (línea 17) y Docente.java;
+                          Principal.java línea 92: una sola lista de Persona
+  Composición ........... Encuesta tiene un Alumno y un Docente (Encuesta.java líneas 4-5)
+  Crear objetos (new) ... Principal.java línea 60 (new Encuesta) y línea 81 (new Alumno)
+  Nota: script.js no usa clases. La POO de este proyecto está en Java.
+
+DOM (sitio/script.js): leer y cambiar elementos de la página
+  Buscar elementos ...... document.getElementById / querySelector / querySelectorAll
+                          (líneas 3, 14, 26, 70-77, 81, 85, 95, 101-103, 119, 124, 135, 140-142)
+  Escuchar eventos ...... addEventListener('submit' / 'input')  (líneas 4, 83, 97, 121)
+  Cambiar texto ......... .textContent  (líneas 70, 71, 75-77, 86)
+  Cambiar estilos ....... .style.width de las barras (líneas 72-74) y .style.display del buscador (línea 87)
+  Leer / poner valores .. .value de los campos (líneas 12, 84, 101-103, 124, 140-142)
+  En el HTML ............ moderacion.html: onclick="this.closest('.tarjeta').remove()" borra la tarjeta
+
+BOM (sitio/script.js): lo que ofrece el navegador, fuera de la página
+  window.location.href .. cambia de página (líneas 21, 113, 130)
+  localStorage .......... guarda datos en el navegador (líneas 12, 16, 27-31, 107, 111-112, 125, 129, 136, 138)
+  alert() ............... ventana de aviso (líneas 20, 108, 126)
+
+SQL (backend/)
+  sql/01_crear_tablas.sql ... CREATE TABLE, PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, DEFAULT
+  sql/02_datos_ejemplo.sql .. INSERT con datos inventados
+  sql/03_consultas.sql ...... SELECT, WHERE, JOIN, GROUP BY, COUNT, AVG, SUM con CASE, ORDER BY,
+                              LEFT JOIN, UPDATE, DELETE
+  BaseDatos.java (Java usa el SQL con JDBC):
+      línea 19 ................ abre la conexión (DriverManager.getConnection)
+      líneas 31, 58, 73, 87 ... SELECT (contar cursos, listar docentes, alumnos con JOIN, cursos)
+      línea 102 ............... INSERT de un alumno (crear cuenta), con un SELECT adentro para buscar el curso
+      línea 117 ............... INSERT de una encuesta
+      línea 131 ............... estadísticas: JOIN + GROUP BY + CASE
+
+TABLAS: cursos, alumnos (cada uno tiene un curso), docentes, encuestas (une un alumno con un docente)
+
+IMPORTANTE
+  - El sitio y el backend todavía no están conectados entre sí. Para conectarlos haría falta un servidor web.
+  - La base es SQLite (un solo archivo, sin instalar nada). Si en clase usan MySQL, en 01_crear_tablas.sql
+    hay que cambiar "INTEGER PRIMARY KEY AUTOINCREMENT" por "INT PRIMARY KEY AUTO_INCREMENT" y TEXT por VARCHAR(100).
+  - backend/lib/sqlite-jdbc.jar es el driver que permite a Java hablar con SQLite. No hay que tocarlo.

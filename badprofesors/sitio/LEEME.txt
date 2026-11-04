@@ -1,0 +1,30 @@
+BadProfesors - sitio de 20 páginas (solo HTML, CSS y JavaScript)
+
+CÓMO USARLO:
+  Hacé doble clic en index.html. No hay que instalar nada ni usar servidor.
+
+LAS 20 PÁGINAS:
+  index.html               inicio
+  como-funciona.html       cómo funciona
+  normas.html              normas de la comunidad
+  ingresar.html            ingresar
+  crear-cuenta.html        crear cuenta
+  encuesta-1.html          encuesta, paso 1 (datos)
+  encuesta-2.html          encuesta, paso 2 (comunicación)
+  encuesta-3.html          encuesta, paso 3 (mejoras)
+  encuesta-4.html          encuesta, paso 4 (comentarios)
+  resultado.html           resultado con las barras (usa lo que se respondió)
+  docentes.html            lista de docentes con buscador
+  perfil-docente.html      perfil de un docente
+  estadisticas.html        estadísticas por curso (de ejemplo)
+  mis-encuestas.html       encuestas enviadas (de ejemplo)
+  mi-cuenta.html           datos de la cuenta
+  preguntas-frecuentes.html  preguntas frecuentes
+  contacto.html            contacto
+  panel-direccion.html     panel de dirección (de ejemplo)
+  moderacion.html          moderación de comentarios
+  error-404.html           página de error
+
+OTROS ARCHIVOS:
+  estilos.css  colores y diseño (lo usan todas las páginas)
+  script.js    pasa los datos entre los pasos de la encuesta, calcula el resultado y filtra docentes

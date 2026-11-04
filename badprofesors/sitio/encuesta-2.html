@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta | BadProfesors</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <nav>
+        <a class="logo" href="index.html">BadProfesors</a>
+        <a href="index.html">Inicio</a><a href="docentes.html">Docentes</a><a href="estadisticas.html">Estadísticas</a><a href="preguntas-frecuentes.html">Ayuda</a>
+        <a class="espacio" href="ingresar.html">Ingresar</a>
+        <a class="boton" href="encuesta-1.html">Hacer encuesta</a>
+    </nav>
+    <main>
+        <h1>Encuesta</h1>
+        <p class="suave">Paso 2 de 4</p>
+        <div class="progreso"><div style="width: 50%"></div></div>
+        <form class="tarjeta" data-siguiente="encuesta-3.html" data-guardar="si">
+            <h2>¿Cómo calificás la comunicación con los docentes?</h2>
+            <label class="opcion"><input type="radio" name="comunicacion" value="excelente" required> Excelente</label>
+            <label class="opcion"><input type="radio" name="comunicacion" value="buena" required> Buena</label>
+            <label class="opcion"><input type="radio" name="comunicacion" value="regular" required> Regular</label>
+            <label class="opcion"><input type="radio" name="comunicacion" value="mala" required> Mala</label>
+            <div class="botones"><a class="boton claro" href="encuesta-1.html">Atrás</a><button class="boton" type="submit">Siguiente</button></div>
+        </form>
+    </main>
+    <footer>
+        <a href="como-funciona.html">Cómo funciona</a><a href="normas.html">Normas</a><a href="preguntas-frecuentes.html">Preguntas</a><a href="contacto.html">Contacto</a><a href="mi-cuenta.html">Mi cuenta</a><a href="mis-encuestas.html">Mis encuestas</a><a href="panel-direccion.html">Panel de dirección</a>
+        <p>© 2026 BadProfesors</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

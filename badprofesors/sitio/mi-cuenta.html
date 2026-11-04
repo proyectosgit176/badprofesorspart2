@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi cuenta | BadProfesors</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <nav>
+        <a class="logo" href="index.html">BadProfesors</a>
+        <a href="index.html">Inicio</a><a href="docentes.html">Docentes</a><a href="estadisticas.html">Estadísticas</a><a href="preguntas-frecuentes.html">Ayuda</a>
+        <a class="espacio" href="ingresar.html">Ingresar</a>
+        <a class="boton" href="encuesta-1.html">Hacer encuesta</a>
+    </nav>
+    <main>
+        <h1>Mi cuenta</h1>
+        <form class="tarjeta" id="formulario-micuenta" data-siguiente="mi-cuenta.html" data-mensaje="Cambios guardados (es un ejemplo, no se guarda nada)">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="nombre@mail.com">
+            <label for="curso">Curso</label>
+            <select id="curso"><option value="">Seleccioná tu curso</option><option>Quinto primera</option><option>Quinto segunda</option><option>Quinto tercera</option><option>Quinto cuarta</option><option>Quinto quinta</option><option>Quinto sexta</option><option>Quinto séptima</option><option>Quinto octava</option></select>
+            <div class="botones"><button class="boton" type="submit">Guardar cambios</button></div>
+        </form>
+        <div class="tarjeta"><h2>Eliminar cuenta</h2><p class="suave" style="margin-bottom:1rem">Esta acción no se puede deshacer.</p>
+            <button class="boton peligro" type="button" onclick="alert('Es un ejemplo: no se elimina nada')">Eliminar cuenta</button></div>
+    </main>
+    <footer>
+        <a href="como-funciona.html">Cómo funciona</a><a href="normas.html">Normas</a><a href="preguntas-frecuentes.html">Preguntas</a><a href="contacto.html">Contacto</a><a href="mi-cuenta.html">Mi cuenta</a><a href="mis-encuestas.html">Mis encuestas</a><a href="panel-direccion.html">Panel de dirección</a>
+        <p>© 2026 BadProfesors</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

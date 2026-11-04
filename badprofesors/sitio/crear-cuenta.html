@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta | BadProfesors</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <nav>
+        <a class="logo" href="index.html">BadProfesors</a>
+        <a href="index.html">Inicio</a><a href="docentes.html">Docentes</a><a href="estadisticas.html">Estadísticas</a><a href="preguntas-frecuentes.html">Ayuda</a>
+        <a class="espacio" href="ingresar.html">Ingresar</a>
+        <a class="boton" href="encuesta-1.html">Hacer encuesta</a>
+    </nav>
+    <main>
+        <div class="centro-caja">
+            <h1>Crear cuenta</h1>
+            <p class="subtitulo">Solo para alumnos de quinto año.</p>
+            <form class="tarjeta" id="formulario-cuenta">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="nombre@mail.com" required>
+                <label for="curso">Curso</label>
+                <select id="curso" required><option value="">Seleccioná tu curso</option><option>Quinto primera</option><option>Quinto segunda</option><option>Quinto tercera</option><option>Quinto cuarta</option><option>Quinto quinta</option><option>Quinto sexta</option><option>Quinto séptima</option><option>Quinto octava</option></select>
+                <label for="clave">Contraseña</label>
+                <input type="password" id="clave" placeholder="Mínimo 8 caracteres" minlength="8" required>
+                <label class="opcion"><input type="checkbox" required> Acepto las <a href="normas.html">normas de la comunidad</a></label>
+                <div class="botones"><button class="boton" type="submit">Crear cuenta</button></div>
+            </form>
+            <p class="centro">¿Ya tenés cuenta? <a href="ingresar.html">Ingresá</a></p>
+        </div>
+    </main>
+    <footer>
+        <a href="como-funciona.html">Cómo funciona</a><a href="normas.html">Normas</a><a href="preguntas-frecuentes.html">Preguntas</a><a href="contacto.html">Contacto</a><a href="mi-cuenta.html">Mi cuenta</a><a href="mis-encuestas.html">Mis encuestas</a><a href="panel-direccion.html">Panel de dirección</a>
+        <p>© 2026 BadProfesors</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
